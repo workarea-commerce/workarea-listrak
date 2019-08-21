@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5JU
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 23 May 2019 14:05:15 GMT
+      Content-Length:
+      - '507'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"75H3MoFxRr0prmAIWGXEzyoTwJFxOY9HYVSAIy1aR1o5-mWVaoZi8FhbiiAui7Ky1o2irKzleS3IhsT2uOojfKqkfkiJVB-XrIGXAtIuEvu60UA44BonYq0Ge5b4NbmF0tp0xTfJrfB7nsf6beCO_nLw8Y7rgAVCXSeyNh8T20tZgbgjUdWZ78xDpHg9HQ7xm5hRC9hyAqKOnFkgZijDEVIqXIbZF7yu3oG-dNTbnKkVj0HZzdj6CCN3fG8pj0FeUlPM_oF-dl_SYbu3gsQPIkTn-5iu20Lx2PVKYjowv3wEqFNQTxUz9tTIDouzjbQnh7E9PkXv1yfMsQCX21c-LGGEqj_ltjF31OePa9UZ3EdAVxIH8toS3-qQJiIPsV3YshsooyxS6mvv44DwdwKoeTvc3BjPVO80UwLImD5Y11ET8IzMjCCKoCWPGHHElfco","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Thu, 23 May 2019 14:05:16 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/email/v1/List/349984/TransactionalMessage/11838256/Message
+    body:
+      encoding: UTF-8
+      string: '{"emailAddress":"plugins@workarea.com","segmentationFieldValues":[{"segmentationFieldId":2446151,"value":"Ben"},{"segmentationFieldId":2446152,"value":"Crouse"},{"segmentationFieldId":2446153,"value":"22
+        S. 3rd St."},{"segmentationFieldId":2446154,"value":"Second Floor"},{"segmentationFieldId":2446155,"value":"Philadelphia"},{"segmentationFieldId":2446156,"value":"PA"},{"segmentationFieldId":2446157,"value":"19106"},{"segmentationFieldId":2446158,"value":"US"},{"segmentationFieldId":2446159,"value":""},{"segmentationFieldId":2446169,"value":"1234"},{"segmentationFieldId":2446174,"value":""},{"segmentationFieldId":2446175,"value":"2019-05-23
+        14:05:16 UTC"},{"segmentationFieldId":2446179,"value":"10.00"},{"segmentationFieldId":2446180,"value":"0.00"},{"segmentationFieldId":2446181,"value":"1.00"},{"segmentationFieldId":2446182,"value":"0.00"},{"segmentationFieldId":2446183,"value":"11.00"},{"segmentationFieldId":2446184,"value":"1"}]}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 75H3MoFxRr0prmAIWGXEzyoTwJFxOY9HYVSAIy1aR1o5-mWVaoZi8FhbiiAui7Ky1o2irKzleS3IhsT2uOojfKqkfkiJVB-XrIGXAtIuEvu60UA44BonYq0Ge5b4NbmF0tp0xTfJrfB7nsf6beCO_nLw8Y7rgAVCXSeyNh8T20tZgbgjUdWZ78xDpHg9HQ7xm5hRC9hyAqKOnFkgZijDEVIqXIbZF7yu3oG-dNTbnKkVj0HZzdj6CCN3fG8pj0FeUlPM_oF-dl_SYbu3gsQPIkTn-5iu20Lx2PVKYjowv3wEqFNQTxUz9tTIDouzjbQnh7E9PkXv1yfMsQCX21c-LGGEqj_ltjF31OePa9UZ3EdAVxIH8toS3-qQJiIPsV3YshsooyxS6mvv44DwdwKoeTvc3BjPVO80UwLImD5Y11ET8IzMjCCKoCWPGHHElfco
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '34'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 23 May 2019 14:05:15 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":201,"resourceId":"null"}'
+    http_version: 
+  recorded_at: Thu, 23 May 2019 14:05:17 GMT
+recorded_with: VCR 2.9.3

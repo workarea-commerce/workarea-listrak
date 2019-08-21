@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5JU
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 17 Dec 2018 20:10:26 GMT
+      Content-Length:
+      - '486'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"aFp6_Q5HXG8rSGEwXSGtfngy-IjE9PwWbcQpJFhg3aSWch3A5lOWs7ZLbtPmMHx8kUZ3hJ-bqWABSpPgRO7Fh6RgEIHO2fnc2kF30HD_mpTMguFlAMk34T3FfnGYsRx0JFJU1mZWHfXjZAtp6D5Lf5EOhCZut3UNcAG6C71UIEA7cAT5z8uYKQu_Sz1DTnOzrUJ1HHAbkmr_Ae6W4BMZrAwObhdh2yV0xdsqGmbYh62m1Ny63GprL0i10Oq7_qRFsjSDVjLe1QsoYba3fAV7L7osclkzby2UR7bj4R21PUCqbShIrNVKKB0O0c3v6pQ44WypeXy5MVLkA05hWAm2CqAo0NX182znfQF6U3BHIMoR5yi9tKif8RSTND69epiocdB8NKUdyUe-KAVjNXldtQwnUq2UmOD3UeFp6PR1oF0","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Mon, 17 Dec 2018 20:10:26 GMT
+- request:
+    method: get
+    uri: https://api.listrak.com/email/v1/List
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer aFp6_Q5HXG8rSGEwXSGtfngy-IjE9PwWbcQpJFhg3aSWch3A5lOWs7ZLbtPmMHx8kUZ3hJ-bqWABSpPgRO7Fh6RgEIHO2fnc2kF30HD_mpTMguFlAMk34T3FfnGYsRx0JFJU1mZWHfXjZAtp6D5Lf5EOhCZut3UNcAG6C71UIEA7cAT5z8uYKQu_Sz1DTnOzrUJ1HHAbkmr_Ae6W4BMZrAwObhdh2yV0xdsqGmbYh62m1Ny63GprL0i10Oq7_qRFsjSDVjLe1QsoYba3fAV7L7osclkzby2UR7bj4R21PUCqbShIrNVKKB0O0c3v6pQ44WypeXy5MVLkA05hWAm2CqAo0NX182znfQF6U3BHIMoR5yi9tKif8RSTND69epiocdB8NKUdyUe-KAVjNXldtQwnUq2UmOD3UeFp6PR1oF0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '1301'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 17 Dec 2018 20:10:26 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":200,"data":[{"listId":349956,"listName":"My First List","folderId":0,"ipPoolId":11,"bounceDomainAlias":"","bounceHandling":"Standard","bounceUnsubscribeCount":5,"createDate":"2015-08-31T16:02:41.65","enableBrowserLink":false,"enableDoubleOptIn":false,"enableDynamicContent":false,"enableGoogleAnalytics":false,"enableInternationalization":false,"enableListHygiene":true,"enableListRemovalHeader":true,"enableListRemovalLink":true,"enableListrakAnalytics":false,"enableSpamScorePersonalization":false,"enableToNamePersonalization":false,"fromEmail":"","fromName":"","googleTrackingDomains":[],"linkDomainAlias":"","mediaDomainAlias":""},{"listId":349984,"listName":"gem-testing","folderId":0,"ipPoolId":11,"bounceDomainAlias":"","bounceHandling":"Standard","bounceUnsubscribeCount":5,"createDate":"2015-09-02T14:42:38.91","enableBrowserLink":false,"enableDoubleOptIn":false,"enableDynamicContent":false,"enableGoogleAnalytics":false,"enableInternationalization":false,"enableListHygiene":true,"enableListRemovalHeader":true,"enableListRemovalLink":true,"enableListrakAnalytics":false,"enableSpamScorePersonalization":false,"enableToNamePersonalization":false,"fromEmail":"mac@weblinc.com","fromName":"WebLinc
+        Developer","googleTrackingDomains":[],"linkDomainAlias":"","mediaDomainAlias":""}]}'
+    http_version: 
+  recorded_at: Mon, 17 Dec 2018 20:10:27 GMT
+recorded_with: VCR 2.9.3

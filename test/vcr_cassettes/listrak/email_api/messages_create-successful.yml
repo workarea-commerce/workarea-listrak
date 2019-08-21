@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5JU
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 23 May 2019 13:34:43 GMT
+      Content-Length:
+      - '507'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"Oo_OgQYTzQ15r8q84037KKT2NMscsth3elbCNv3isgMOi2j0qDAPsPnDO89QEnzbhwI770e4VZeKDLPkF414ndl0D8CVb4zMRhxmxg1fNnL96NzsC-zQT75RCuWIC0f3xBbswEAm8BsjxIt6Xl-l0zgqxX2cRUKT9Ggt3V9TN_oRjE88mazyUcCxVHaerv4xkyVAIuwpW2udoP59QH-9jaKpXKtw_MpRVqMQIHX68RwFVeAHb41RWtaTsYSvx2ptuj_VfYHVQDxX9h__56il19XLsamxZ0A9jCHtKE2TLSFr3chIMarvrFzHrUP_xzRPta4YdV0PTbnEQ7SImu1SB5MTcRZ-PNep5LZ0O_r1X9XT2n63ld8caQkwhT5KDwOqCbj6F7gSeqTIP7ziJpIBVeahm1Fqd-03oP1EJeIJxOHF_u_KXrhl4VaW5OIe6sdV","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Thu, 23 May 2019 13:34:44 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/email/v1/List/349984/Message
+    body:
+      encoding: UTF-8
+      string: '{"bodyHtml":"This is the body","fromEmail":"plugins@workarea.com","fromName":"Plugins
+        @ Workarea.com","subject":"Testing creating a message"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer Oo_OgQYTzQ15r8q84037KKT2NMscsth3elbCNv3isgMOi2j0qDAPsPnDO89QEnzbhwI770e4VZeKDLPkF414ndl0D8CVb4zMRhxmxg1fNnL96NzsC-zQT75RCuWIC0f3xBbswEAm8BsjxIt6Xl-l0zgqxX2cRUKT9Ggt3V9TN_oRjE88mazyUcCxVHaerv4xkyVAIuwpW2udoP59QH-9jaKpXKtw_MpRVqMQIHX68RwFVeAHb41RWtaTsYSvx2ptuj_VfYHVQDxX9h__56il19XLsamxZ0A9jCHtKE2TLSFr3chIMarvrFzHrUP_xzRPta4YdV0PTbnEQ7SImu1SB5MTcRZ-PNep5LZ0O_r1X9XT2n63ld8caQkwhT5KDwOqCbj6F7gSeqTIP7ziJpIBVeahm1Fqd-03oP1EJeIJxOHF_u_KXrhl4VaW5OIe6sdV
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '38'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 23 May 2019 13:34:43 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":201,"resourceId":"11862792"}'
+    http_version: 
+  recorded_at: Thu, 23 May 2019 13:34:45 GMT
+recorded_with: VCR 2.9.3

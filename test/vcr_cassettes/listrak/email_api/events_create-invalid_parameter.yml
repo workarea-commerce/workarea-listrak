@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5JU
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 19 Dec 2018 18:30:56 GMT
+      Content-Length:
+      - '486'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"JDcgMdNnun-gT1GcM_Lr4OJLhVcFENTdQnplKKgYP6b8BBXZzx0_F-IcNkd1X-GSXDCfx_Hghzo7AmIiFc3QdNcbXHww3ma0Asw2ja3a_RKdLaS7wkfH-f3Sf0OWnlKLE-xrViPiPXNRVNE-p0vYExq6CEn-pZZP4Z-d0PzMq11xq4DcJg3cTHg9mSi3ui6b3tgKcEwPnzi-Hf-SP_ynWV1tyOrScJZNxu0-Deg_Ay9P0ICfJ8CqDQ-SFzTFwNqiKyq7OKvHeqpzILHy5_nMgy6_GWxq0KfYh9bQ1HbEgoK5QUNEBOTt-8-_UghaS6AzkdAcXY2Ud5X7oWBqSbuYXtKPQ1z72mWDsRENdFfpJBdnJRk25fiSSc_eEZNU7LI3T3rSDXESkpn57Y433NvZk9wTeAtivGxr6uXgp2utc3k","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Wed, 19 Dec 2018 18:30:57 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/email/v1/List/349984/Event
+    body:
+      encoding: UTF-8
+      string: '{"eventName":"footer signup","status":"Active"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer JDcgMdNnun-gT1GcM_Lr4OJLhVcFENTdQnplKKgYP6b8BBXZzx0_F-IcNkd1X-GSXDCfx_Hghzo7AmIiFc3QdNcbXHww3ma0Asw2ja3a_RKdLaS7wkfH-f3Sf0OWnlKLE-xrViPiPXNRVNE-p0vYExq6CEn-pZZP4Z-d0PzMq11xq4DcJg3cTHg9mSi3ui6b3tgKcEwPnzi-Hf-SP_ynWV1tyOrScJZNxu0-Deg_Ay9P0ICfJ8CqDQ-SFzTFwNqiKyq7OKvHeqpzILHy5_nMgy6_GWxq0KfYh9bQ1HbEgoK5QUNEBOTt-8-_UghaS6AzkdAcXY2Ud5X7oWBqSbuYXtKPQ1z72mWDsRENdFfpJBdnJRk25fiSSc_eEZNU7LI3T3rSDXESkpn57Y433NvZk9wTeAtivGxr6uXgp2utc3k
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - Microsoft-IIS/8.5
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 19 Dec 2018 18:30:57 GMT
+      Expires:
+      - "-1"
+      Pragma:
+      - no-cache
+      Connection:
+      - close
+      X-Powered-By:
+      - ASP.NET
+      Content-Length:
+      - '105'
+    body:
+      encoding: UTF-8
+      string: '{"status":400,"error":"ERROR_INVALID_PARAMETER","message":"An invalid
+        value was supplied for eventName."}'
+    http_version: 
+  recorded_at: Wed, 19 Dec 2018 18:30:58 GMT
+recorded_with: VCR 2.9.3

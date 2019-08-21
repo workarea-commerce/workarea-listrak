@@ -1,0 +1,171 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5JU
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 03 Jan 2019 15:42:33 GMT
+      Content-Length:
+      - '507'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"SLI6-PienBZnvaYgpf3gnuQDX2RqfcE6ubKr5i7sg-LGGMga5WI9eWTi-Rx-Xh77GPBmoWhQ4ZL-g8pRnZky7K8CY6qFhm7wE0xfHAhIUW8HfP7P8AT7QagPETU5ot774g8bNypLmEZkAPruk5acTbc8qI0-bBZS_SUzN1hfFjWqJyy6nXNe2Ki0Hk4qZZaL-YsXlhpApG9E0tm2svfLmFl6EYJakN_X_xMImg9j4fsyI1T28D_Dku-8pFLWauDQbcrd5Lbj4e8TrR5OMfwF30u-XEB4_eybxWLveh2pQCYbOKzXuhRozDz9-vSH0Z6W3ZC3MHs10eL-pegn5_V8oRZngqE59vUkHSABBsoNr9bT_oGeXH-DvFAXwKHbIbXziaGbH46co-84hcfq8WXPOqEnBqRtNrsIJMNsqx1C3fd6U0MQLFtJAZkDlTkXlkdX","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Thu, 03 Jan 2019 15:42:34 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/email/v1/List/349984/Contact?eventIds=12714&overrideUnsubscribe=true
+    body:
+      encoding: UTF-8
+      string: '{"emailAddress":"epigeon@weblinc.com","subscriptionState":"Subscribed","segmentationFieldValues":null}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer SLI6-PienBZnvaYgpf3gnuQDX2RqfcE6ubKr5i7sg-LGGMga5WI9eWTi-Rx-Xh77GPBmoWhQ4ZL-g8pRnZky7K8CY6qFhm7wE0xfHAhIUW8HfP7P8AT7QagPETU5ot774g8bNypLmEZkAPruk5acTbc8qI0-bBZS_SUzN1hfFjWqJyy6nXNe2Ki0Hk4qZZaL-YsXlhpApG9E0tm2svfLmFl6EYJakN_X_xMImg9j4fsyI1T28D_Dku-8pFLWauDQbcrd5Lbj4e8TrR5OMfwF30u-XEB4_eybxWLveh2pQCYbOKzXuhRozDz9-vSH0Z6W3ZC3MHs10eL-pegn5_V8oRZngqE59vUkHSABBsoNr9bT_oGeXH-DvFAXwKHbIbXziaGbH46co-84hcfq8WXPOqEnBqRtNrsIJMNsqx1C3fd6U0MQLFtJAZkDlTkXlkdX
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '49'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 03 Jan 2019 15:42:33 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":200,"resourceId":"epigeon@weblinc.com"}'
+    http_version: 
+  recorded_at: Thu, 03 Jan 2019 15:42:34 GMT
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5JU
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 03 Jan 2019 15:42:34 GMT
+      Content-Length:
+      - '507'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"tyuUeTULaD0ALcqjNfE5hKPrBfICJFtoiSXVwJVRoB-kzUjUj7tf5qiu3vmCSB0DdqHqWxicddFRzF745QNfUTdsFzkNGO-nGdYnwHxCotJeD6cDbeGEZohtXQZSeAty-xF56OzqEH4p1BO75x7AtAnLcN1ZWdTly4DowUfXvvCwrPcJJb_SDVvrBDInTGjkAH9H3HrUOZk13-y8UjeBLNna8oe2f3vv40E5fKaxlmFR568Hc66dT3Uv_Sw2P7VjQe4JxMUdlqj1ZUgsrKuzbmBk7Lh9WGx1TomTjzx4N8Pvaev1kfBmOKv0G25sgUlGp2p3fB_W_h1bCXKzaqpWZJ6EA8mjMMILTWETmnSibFV1O94ZPscO6exRawcU5lCTDHw3yoxIFm1v2eh28H6V9Vsg7_rH-rAjUH_nmqYMQgeONEGq3Yyyt6j2i_fDngsR","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Thu, 03 Jan 2019 15:42:35 GMT
+- request:
+    method: get
+    uri: https://api.listrak.com/email/v1/List/349984/Contact/epigeon@weblinc.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer tyuUeTULaD0ALcqjNfE5hKPrBfICJFtoiSXVwJVRoB-kzUjUj7tf5qiu3vmCSB0DdqHqWxicddFRzF745QNfUTdsFzkNGO-nGdYnwHxCotJeD6cDbeGEZohtXQZSeAty-xF56OzqEH4p1BO75x7AtAnLcN1ZWdTly4DowUfXvvCwrPcJJb_SDVvrBDInTGjkAH9H3HrUOZk13-y8UjeBLNna8oe2f3vv40E5fKaxlmFR568Hc66dT3Uv_Sw2P7VjQe4JxMUdlqj1ZUgsrKuzbmBk7Lh9WGx1TomTjzx4N8Pvaev1kfBmOKv0G25sgUlGp2p3fB_W_h1bCXKzaqpWZJ6EA8mjMMILTWETmnSibFV1O94ZPscO6exRawcU5lCTDHw3yoxIFm1v2eh28H6V9Vsg7_rH-rAjUH_nmqYMQgeONEGq3Yyyt6j2i_fDngsR
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '282'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 03 Jan 2019 15:42:34 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":200,"data":{"emailAddress":"epigeon@weblinc.com","emailKey":"7425C5B02479E4B7C485A4BF8A","subscriptionState":"Subscribed","subscribeDate":"2018-12-14T14:45:04","subscribeMethod":"Administrator","unsubscribeDate":null,"unsubscribeMethod":null,"segmentationFieldValues":[]}}'
+    http_version: 
+  recorded_at: Thu, 03 Jan 2019 15:42:35 GMT
+recorded_with: VCR 2.9.3

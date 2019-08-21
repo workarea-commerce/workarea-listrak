@@ -1,0 +1,7 @@
+module Workarea
+  decorate Categorization, with: :listrak do
+    def secondary_model
+      to_models.sort_by(&:created_at).second
+    end
+  end
+end

@@ -1,0 +1,593 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=a&client_secret=b
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:33 GMT
+      Content-Length:
+      - '486'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"mn49oWGxijkPhEja3DfS1JXpq7P_P_ZtsAYiqPNohYQ-G2ZDnvCk2LMaH4ItLiiALFtZZ85uBqwpb8pGis_9s7Fr1qzivm69M7KLf1aERn5CMQRvMSEdUTfahJ0UfIRW5L3DgiLtGY1-KhhuavLMh6PpKal4vAJN22q694SACIF2-s4Vl3ah77bygjspbl0pRvngO9XPEPR_XCT45z7h1s1orkQwetf3WtxrQ4S6cBW20-Q0qZvF57j_5nd_N5sq4L-4AmcMFAS5GiNeDVLtmtBW1mignJCWs6AMsz7KMkDN4dHiRn8trHn29XbXj1JUcpZmioTcr38RRKK0mSDnl-J07g4brr-m3zucpw0of9wJiTMqAaNMWyeSjoZYMXr_fEy9cwIB_TFz78m7FcbDlf-G1j0jFoy2hsvB0fE-2mg","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:34 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/data/v1/Customer
+    body:
+      encoding: UTF-8
+      string: '[{"customerNumber":"5c3cca8287c68be526bc","email":"employee+2@weblinc.com","registered":true}]'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer mn49oWGxijkPhEja3DfS1JXpq7P_P_ZtsAYiqPNohYQ-G2ZDnvCk2LMaH4ItLiiALFtZZ85uBqwpb8pGis_9s7Fr1qzivm69M7KLf1aERn5CMQRvMSEdUTfahJ0UfIRW5L3DgiLtGY1-KhhuavLMh6PpKal4vAJN22q694SACIF2-s4Vl3ah77bygjspbl0pRvngO9XPEPR_XCT45z7h1s1orkQwetf3WtxrQ4S6cBW20-Q0qZvF57j_5nd_N5sq4L-4AmcMFAS5GiNeDVLtmtBW1mignJCWs6AMsz7KMkDN4dHiRn8trHn29XbXj1JUcpZmioTcr38RRKK0mSDnl-J07g4brr-m3zucpw0of9wJiTMqAaNMWyeSjoZYMXr_fEy9cwIB_TFz78m7FcbDlf-G1j0jFoy2hsvB0fE-2mg
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:34 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":201,"resourceId":null}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:35 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/data/v1/Customer
+    body:
+      encoding: UTF-8
+      string: '[{"customerNumber":"5c3cca8287c68be526bc","email":"employee+2@weblinc.com","registered":true}]'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer mn49oWGxijkPhEja3DfS1JXpq7P_P_ZtsAYiqPNohYQ-G2ZDnvCk2LMaH4ItLiiALFtZZ85uBqwpb8pGis_9s7Fr1qzivm69M7KLf1aERn5CMQRvMSEdUTfahJ0UfIRW5L3DgiLtGY1-KhhuavLMh6PpKal4vAJN22q694SACIF2-s4Vl3ah77bygjspbl0pRvngO9XPEPR_XCT45z7h1s1orkQwetf3WtxrQ4S6cBW20-Q0qZvF57j_5nd_N5sq4L-4AmcMFAS5GiNeDVLtmtBW1mignJCWs6AMsz7KMkDN4dHiRn8trHn29XbXj1JUcpZmioTcr38RRKK0mSDnl-J07g4brr-m3zucpw0of9wJiTMqAaNMWyeSjoZYMXr_fEy9cwIB_TFz78m7FcbDlf-G1j0jFoy2hsvB0fE-2mg
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:34 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":201,"resourceId":null}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:35 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/data/v1/Customer
+    body:
+      encoding: UTF-8
+      string: '[{"customerNumber":"5c3cca8287c68be526bc","email":"employee+2@weblinc.com","registered":true}]'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer mn49oWGxijkPhEja3DfS1JXpq7P_P_ZtsAYiqPNohYQ-G2ZDnvCk2LMaH4ItLiiALFtZZ85uBqwpb8pGis_9s7Fr1qzivm69M7KLf1aERn5CMQRvMSEdUTfahJ0UfIRW5L3DgiLtGY1-KhhuavLMh6PpKal4vAJN22q694SACIF2-s4Vl3ah77bygjspbl0pRvngO9XPEPR_XCT45z7h1s1orkQwetf3WtxrQ4S6cBW20-Q0qZvF57j_5nd_N5sq4L-4AmcMFAS5GiNeDVLtmtBW1mignJCWs6AMsz7KMkDN4dHiRn8trHn29XbXj1JUcpZmioTcr38RRKK0mSDnl-J07g4brr-m3zucpw0of9wJiTMqAaNMWyeSjoZYMXr_fEy9cwIB_TFz78m7FcbDlf-G1j0jFoy2hsvB0fE-2mg
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:34 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":201,"resourceId":null}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:35 GMT
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5JU
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:36 GMT
+      Content-Length:
+      - '486'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"FziLUXqoHwKGslov3qOcdi9TKfMzAGiDzxIdeyjNluXpZTlpxybj9P-CCQd3TzPRHGpiFjy4NgEnOcGqp1VbxQUtulGuKEOnR5YjUnBpuFSs5XGexEUPE3pdj47-7qawzr5WF-_orX-7UEeV7hks7NPFwlpPm5jHPSA0MsJ9uejby03PMBl0VOwEj3w63Dhc3iwBmR_OSC4upIcH1LpMhAPw3YvyHFPQSQGtDqmZb9jKzq4fcqUpUTHVliusHER6ZBS7iRTNTINsMuDjJKJ4Nhb6xYkOqouYCS6gSPKt1OBfyFp8fyGdLBaFqOf8lqVZw3QQ967sgUqDB1kkXsJcvs1nYtnrmpkpSCCLzYzf-ChWvu43rWRykKhEEHl_fkYngUFIWwGgNX5cOIS_3AvxIvyRh1bpciOk8YRfaGegO_w","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:36 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/email/v1/List/349984/Contact?overrideUnsubscribe=true
+    body:
+      encoding: UTF-8
+      string: '{"emailAddress":"employee+2@weblinc.com","subscriptionState":"Subscribed","segmentationFieldValues":null}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer FziLUXqoHwKGslov3qOcdi9TKfMzAGiDzxIdeyjNluXpZTlpxybj9P-CCQd3TzPRHGpiFjy4NgEnOcGqp1VbxQUtulGuKEOnR5YjUnBpuFSs5XGexEUPE3pdj47-7qawzr5WF-_orX-7UEeV7hks7NPFwlpPm5jHPSA0MsJ9uejby03PMBl0VOwEj3w63Dhc3iwBmR_OSC4upIcH1LpMhAPw3YvyHFPQSQGtDqmZb9jKzq4fcqUpUTHVliusHER6ZBS7iRTNTINsMuDjJKJ4Nhb6xYkOqouYCS6gSPKt1OBfyFp8fyGdLBaFqOf8lqVZw3QQ967sgUqDB1kkXsJcvs1nYtnrmpkpSCCLzYzf-ChWvu43rWRykKhEEHl_fkYngUFIWwGgNX5cOIS_3AvxIvyRh1bpciOk8YRfaGegO_w
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '52'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:36 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":200,"resourceId":"employee+2@weblinc.com"}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:36 GMT
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5JU
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:37 GMT
+      Content-Length:
+      - '486'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"U92YfRA1je9ubSlJI2QgwlAgdzmD7bakIiAsh16xjMf68nJeqe-bDoR9q2e27St0SDrnPZjezauxErynUOO6pGvixRtJrn_sR8OScgVkv1Uq_UP3m4_Af0UWNhztzdsxxw8mPBIATddpD29JfgeA4Ci_Jd_zbwPh8jjz2YRasdNx2xI3Z3i3bShUny_awigpJ1NM5bWekDAxWFcE8sGebnhHGfU8iSfSqGPAmtDrvdjG3YYnd_w26RpG4qYYsgPsjmzJiGGOlRx5qVzr3zEm0lU12Idml44lAMv-9KQBq7qxmbJ_7oUCjcxCY_mUjZUQZ0kjWg81F0UOaXdqTkmW71QWMlFSzKutLmGujqAo_2MA33fljLfDGMNLZ31u5uXpIoVdu5KL7Smxb3Ve8zwtGgmdhtar9teRWBHso6UfBrA","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:37 GMT
+- request:
+    method: get
+    uri: https://api.listrak.com/email/v1/List/349984/Contact/employee+2@weblinc.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer U92YfRA1je9ubSlJI2QgwlAgdzmD7bakIiAsh16xjMf68nJeqe-bDoR9q2e27St0SDrnPZjezauxErynUOO6pGvixRtJrn_sR8OScgVkv1Uq_UP3m4_Af0UWNhztzdsxxw8mPBIATddpD29JfgeA4Ci_Jd_zbwPh8jjz2YRasdNx2xI3Z3i3bShUny_awigpJ1NM5bWekDAxWFcE8sGebnhHGfU8iSfSqGPAmtDrvdjG3YYnd_w26RpG4qYYsgPsjmzJiGGOlRx5qVzr3zEm0lU12Idml44lAMv-9KQBq7qxmbJ_7oUCjcxCY_mUjZUQZ0kjWg81F0UOaXdqTkmW71QWMlFSzKutLmGujqAo_2MA33fljLfDGMNLZ31u5uXpIoVdu5KL7Smxb3Ve8zwtGgmdhtar9teRWBHso6UfBrA
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '285'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:37 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":200,"data":{"emailAddress":"employee+2@weblinc.com","emailKey":"84C5648D15B0646C14EF6519E6","subscriptionState":"Subscribed","subscribeDate":"2018-12-17T13:29:48","subscribeMethod":"Administrator","unsubscribeDate":null,"unsubscribeMethod":null,"segmentationFieldValues":[]}}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:37 GMT
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=a&client_secret=b
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:38 GMT
+      Content-Length:
+      - '486'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"TZvY-_1aBzHxOThBqQp69V5tD59uia6E2VFJAEEdRX5a5NTeKOtD-y3XEUdsQpQATeCjcsGApWswmjNt6Z1ARM_3PK4z8MP9J4cOpZdiCCR1qra3cM7c34vpKc5PE_ren7sV6r5LPNoYxQpS41SW9hFSorYTbmkAl51sT1q5CN77DeibNu5i2g1IqAS18Z7WAPVrpnv6uN8B7ZHmLSlzWxdtBaG7K3ZHeFIS2EOTxS5YPaKNfu_rcYvygLjS79pK-BXL_jRHzhe7yFButaTYjKCKpbb7SVjiBjIRQ8QWGxWD6-ofKDaiPJYkJDn1F81SoqYa_gu_ji96mL9VOvTCiuyjHZF5SFVnm-N1gwyWasVInrEGpIqcT1JvKzTY1zsKOGhVO50DGhyy1kgI0fb6nbFreMxY3nM9d5lhtdfFVtM","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:39 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/data/v1/Customer
+    body:
+      encoding: UTF-8
+      string: '[{"customerNumber":"5c3cca8287c68be526bc","email":"employee+2@weblinc.com","firstName":"","lastName":"","registered":true}]'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer TZvY-_1aBzHxOThBqQp69V5tD59uia6E2VFJAEEdRX5a5NTeKOtD-y3XEUdsQpQATeCjcsGApWswmjNt6Z1ARM_3PK4z8MP9J4cOpZdiCCR1qra3cM7c34vpKc5PE_ren7sV6r5LPNoYxQpS41SW9hFSorYTbmkAl51sT1q5CN77DeibNu5i2g1IqAS18Z7WAPVrpnv6uN8B7ZHmLSlzWxdtBaG7K3ZHeFIS2EOTxS5YPaKNfu_rcYvygLjS79pK-BXL_jRHzhe7yFButaTYjKCKpbb7SVjiBjIRQ8QWGxWD6-ofKDaiPJYkJDn1F81SoqYa_gu_ji96mL9VOvTCiuyjHZF5SFVnm-N1gwyWasVInrEGpIqcT1JvKzTY1zsKOGhVO50DGhyy1kgI0fb6nbFreMxY3nM9d5lhtdfFVtM
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:38 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":201,"resourceId":null}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:39 GMT
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5JU
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:39 GMT
+      Content-Length:
+      - '486'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"RvtV37VEwTyKsQcaMDjjPXbKQFNuqlnNpNnguBPnF-ajoAcJ0yiW5svoifiwOHIjgg-gCGjmIJLf4iBE9K9TTeGXmxPadm3ySzheMGLxmEwgCvYNbdoIAV2I6e741MP0DrDsxFdZjAOtyMLfT7EpGOHscYOTir1YnEuTHyrBQWu331Otf_YrlEibkyGMvpnMolQYza1o3mnuG0cjbfocKY7k6ZhZIk8hYlztDULAWBxWk3AdSK-7-CAQzx1l84jt6ITuHmeqc9XggnM7Y21iLvVUdhAf0TQKAGfjPmd6It6gE-YXdxPnpPjPSf9GfXwTU5N_PDdbMaEdejLxsOKOhnma9x5wMZoilV7_85dYSWmzBuR3MTe8JyL5RdisOan745OCGgtn0gXyuOvDhX78kxWRRXV1aK99jldOdIgoWcA","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:39 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/email/v1/List/349984/Contact?overrideUnsubscribe=true
+    body:
+      encoding: UTF-8
+      string: '{"emailAddress":"employee+2@weblinc.com","subscriptionState":"Unsubscribed","segmentationFieldValues":null}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer RvtV37VEwTyKsQcaMDjjPXbKQFNuqlnNpNnguBPnF-ajoAcJ0yiW5svoifiwOHIjgg-gCGjmIJLf4iBE9K9TTeGXmxPadm3ySzheMGLxmEwgCvYNbdoIAV2I6e741MP0DrDsxFdZjAOtyMLfT7EpGOHscYOTir1YnEuTHyrBQWu331Otf_YrlEibkyGMvpnMolQYza1o3mnuG0cjbfocKY7k6ZhZIk8hYlztDULAWBxWk3AdSK-7-CAQzx1l84jt6ITuHmeqc9XggnM7Y21iLvVUdhAf0TQKAGfjPmd6It6gE-YXdxPnpPjPSf9GfXwTU5N_PDdbMaEdejLxsOKOhnma9x5wMZoilV7_85dYSWmzBuR3MTe8JyL5RdisOan745OCGgtn0gXyuOvDhX78kxWRRXV1aK99jldOdIgoWcA
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '52'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:40 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":200,"resourceId":"employee+2@weblinc.com"}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:40 GMT
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5JU
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:41 GMT
+      Content-Length:
+      - '486'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"k_v05KGWA0P85o5m7Tsz9oJiczl1EJ9-G1SignCNBa0XDIH3ZUPw94FqmaBoZqM8Wa7CcTABpijyfGWAOvSlVwNAulb8ogKSRS9BzMCBR9VX-qxqzMrbvJeGKAE9_ijHzmaHT_zTEo92XMF5YTPMrVR2gYnqflB84jUB5Cq_UsHBUFQd5t_6vqlE-lBcKC9f_Qzn4ZlfaKonVqtpBXAyrzBmjT9Yq_ggyTuMnkJ1Tl02yjBVRka5KH-VCVSO89xFhzrulXNCOotRX_aMbaQUl3Z0Eg8wIs9VlhtfWxF-lUO-bfzG89Kuay0yGYQ1tPCXD55xf300DI4TZ8xWAQH2SYQGLJVKLtRidK3N-NnlIFe10_VyMQSG_nMhNexnGvvzVPoC-dIeffp_7xK_wlDxGsiEUlMw-jXaWZIs5d5yOJI","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:41 GMT
+- request:
+    method: get
+    uri: https://api.listrak.com/email/v1/List/349984/Contact/employee+2@weblinc.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer k_v05KGWA0P85o5m7Tsz9oJiczl1EJ9-G1SignCNBa0XDIH3ZUPw94FqmaBoZqM8Wa7CcTABpijyfGWAOvSlVwNAulb8ogKSRS9BzMCBR9VX-qxqzMrbvJeGKAE9_ijHzmaHT_zTEo92XMF5YTPMrVR2gYnqflB84jUB5Cq_UsHBUFQd5t_6vqlE-lBcKC9f_Qzn4ZlfaKonVqtpBXAyrzBmjT9Yq_ggyTuMnkJ1Tl02yjBVRka5KH-VCVSO89xFhzrulXNCOotRX_aMbaQUl3Z0Eg8wIs9VlhtfWxF-lUO-bfzG89Kuay0yGYQ1tPCXD55xf300DI4TZ8xWAQH2SYQGLJVKLtRidK3N-NnlIFe10_VyMQSG_nMhNexnGvvzVPoC-dIeffp_7xK_wlDxGsiEUlMw-jXaWZIs5d5yOJI
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '304'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 17:44:41 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":200,"data":{"emailAddress":"employee+2@weblinc.com","emailKey":"84C5648D15B0646C14EF6519E6","subscriptionState":"Unsubscribed","subscribeDate":"2018-12-17T13:29:48","subscribeMethod":null,"unsubscribeDate":"2019-01-14T12:44:40","unsubscribeMethod":"Administrator","segmentationFieldValues":[]}}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 17:44:42 GMT
+recorded_with: VCR 2.9.3

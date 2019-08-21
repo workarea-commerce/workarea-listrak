@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=a&client_secret=b
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 11 Jan 2019 15:33:27 GMT
+      Content-Length:
+      - '486'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"gHr2c2Yo_volAhds8rn7B7sxWnoLfg2C5Re8g2n-l4HnD2ro9xcvxlTr5ILYPLBTT-a6SB0dv-ueKUBFWZPJQnVgajaxk76RPa8O_ILnW-dORU6WDAbDVDfUMzROl-Jd30qeR0YjnvSkvAEIHQcZL9BUWPllZz1XuCs7pAD7HBp9Tf8YGCec30tJuDZ6MsFnpEIVmfp3ng4JL9WuGnJ6TZOaB_JdBLeB-nNw4Gxwwik92qYQTmKb43a3BCWAWaFHIVB0KEv5e0xPos4VawgcOfqSnbLwNpeOWOgVhoBJHodQ0eDxItA0YB0oN8MKCLbVm2qEp3OBvG_iBJRmKhflnvnlaJtxQBvRTLdZCHcPwqF4rmyayEPQoDKxQbvIu01atIxDK1501-xQ3Mc8vYL0Y4gW5osFWxwU2wJvvaqKBEY","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Fri, 11 Jan 2019 15:33:28 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/data/v1/Product
+    body:
+      encoding: UTF-8
+      string: '[{"inStock":true,"isPurchasable":true,"isViewable":true,"linkUrl":"http://www.example.com/products/test-product","masterSku":"4C432DBA9B","onSale":false,"price":5.0,"qoh":5,"salePrice":0.0,"sku":"SKU","title":"Test
+        Product"}]'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer gHr2c2Yo_volAhds8rn7B7sxWnoLfg2C5Re8g2n-l4HnD2ro9xcvxlTr5ILYPLBTT-a6SB0dv-ueKUBFWZPJQnVgajaxk76RPa8O_ILnW-dORU6WDAbDVDfUMzROl-Jd30qeR0YjnvSkvAEIHQcZL9BUWPllZz1XuCs7pAD7HBp9Tf8YGCec30tJuDZ6MsFnpEIVmfp3ng4JL9WuGnJ6TZOaB_JdBLeB-nNw4Gxwwik92qYQTmKb43a3BCWAWaFHIVB0KEv5e0xPos4VawgcOfqSnbLwNpeOWOgVhoBJHodQ0eDxItA0YB0oN8MKCLbVm2qEp3OBvG_iBJRmKhflnvnlaJtxQBvRTLdZCHcPwqF4rmyayEPQoDKxQbvIu01atIxDK1501-xQ3Mc8vYL0Y4gW5osFWxwU2wJvvaqKBEY
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 11 Jan 2019 15:33:27 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":201,"resourceId":null}'
+    http_version: 
+  recorded_at: Fri, 11 Jan 2019 15:33:28 GMT
+recorded_with: VCR 2.9.3

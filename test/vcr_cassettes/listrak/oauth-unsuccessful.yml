@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5J
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - Microsoft-IIS/8.5
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 12 Dec 2018 15:37:38 GMT
+      Expires:
+      - "-1"
+      Pragma:
+      - no-cache
+      Connection:
+      - close
+      X-Powered-By:
+      - ASP.NET
+      Content-Length:
+      - '31'
+    body:
+      encoding: UTF-8
+      string: '{"error":"Invalid Credentials"}'
+    http_version: 
+  recorded_at: Wed, 12 Dec 2018 15:37:40 GMT
+recorded_with: VCR 2.9.3

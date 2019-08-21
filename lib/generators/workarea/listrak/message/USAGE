@@ -1,0 +1,9 @@
+Description:
+    Generates the class that kicks off a new transactional email to
+    Listrak for delivery.
+
+Example:
+    rails generate workarea:listrak:message BackorderConfirmation
+
+    This will create:
+        app/messages/workarea/backorder_confirmation_message.rb

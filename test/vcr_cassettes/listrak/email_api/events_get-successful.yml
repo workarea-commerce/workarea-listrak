@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5JU
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 18 Dec 2018 20:01:33 GMT
+      Content-Length:
+      - '486'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"fPZbant0j_IOzSl1IIJUaGg7oO5uWYoyM8Mdt7Iyh67oGs5KLZ_hlUp7OIdk37B-lt3c-0OL9vo2hPUhBSmCIixs11EGGVFzOoBNys03yfKt35tWTggfxFEHbYI4eNkqywrXVzC2FADGnMydVhiKw1CZHt-w6Ylqwa_m9GWZam4tBk7RDxJ-pnKm8RWPGRdtQR0qRABKNobsmEw0YCHya5gHpm5z23pIngfcJXRAAhieM_RtsJq7_ZrLGjjdMZ-gtHRYoAo2hx6qguU-yC1RgirKnU_VzBI9wHm_WaoM78Ksoy4mp-qJR8iQI9dUK3iZ_U8cF9UXchZyaVP7MrBaTGWtQXQQASZWfPOibg1G_N02ln13fDmdRWK7-WQpymHYun-TaSW_dq7QsdecTrm32nsM3hHyOYQkQDZY1jwJMtI","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Tue, 18 Dec 2018 20:01:33 GMT
+- request:
+    method: get
+    uri: https://api.listrak.com/email/v1/List/349984/Event
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer fPZbant0j_IOzSl1IIJUaGg7oO5uWYoyM8Mdt7Iyh67oGs5KLZ_hlUp7OIdk37B-lt3c-0OL9vo2hPUhBSmCIixs11EGGVFzOoBNys03yfKt35tWTggfxFEHbYI4eNkqywrXVzC2FADGnMydVhiKw1CZHt-w6Ylqwa_m9GWZam4tBk7RDxJ-pnKm8RWPGRdtQR0qRABKNobsmEw0YCHya5gHpm5z23pIngfcJXRAAhieM_RtsJq7_ZrLGjjdMZ-gtHRYoAo2hx6qguU-yC1RgirKnU_VzBI9wHm_WaoM78Ksoy4mp-qJR8iQI9dUK3iZ_U8cF9UXchZyaVP7MrBaTGWtQXQQASZWfPOibg1G_N02ln13fDmdRWK7-WQpymHYun-TaSW_dq7QsdecTrm32nsM3hHyOYQkQDZY1jwJMtI
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '176'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 18 Dec 2018 20:01:34 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":200,"data":[{"eventId":12714,"eventName":"Test","eventGroupId":0,"status":"Active"},{"eventId":12715,"eventName":"footer
+        signup","eventGroupId":0,"status":"Active"}]}'
+    http_version: 
+  recorded_at: Tue, 18 Dec 2018 20:01:34 GMT
+recorded_with: VCR 2.9.3

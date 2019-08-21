@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=a&client_secret=b
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 11 Jan 2019 20:11:51 GMT
+      Content-Length:
+      - '465'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"c2gMJxk6E1Z8oRkQVu9rYwAADDMCmA45JlrY8CZjVhG2GKzyYSFvgd9TTrESgAbSs-xCu5UwZ6tUVludWg8GQfro_S1RDJ5Gs0bhneQBnCIYya3adUdEEp4ByCTHPjIr1wp2ydWXaK-OMUqZwezZEAVaMRsIwtYPSkA84SdbKhPcRxXtbSXpb4ZrkS5V4GQNNmUm8wVFRP9RSrnivw1LuFGZ1OwyIYBW1az6CXNq7eLHJrHA3UgnviMnpQpfy3sfa67R2wQUduEb2ikFMV53EVmdtZ9KhCRinhtuAjT2dtLa0jGbfLfTvd480XJqC3v9lFMkspXNT3LNHUEoY43HzPql7cV1O8JU6NhiP1nE41iQozLP9YNZcp-feqgRCPqEKSXeVyRTmvyfcMPFvDMvTQ","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Fri, 11 Jan 2019 20:11:52 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/data/v1/Customer
+    body:
+      encoding: UTF-8
+      string: '[{"address":{"address1":"22 S. 3rd St.","address2":"Second Floor","city":"Philadelphia","country":"United
+        States of America","state":"PA"},"customerNumber":"5c38f88787c68bbe993a","email":"user0@workarea.com","firstName":"Ben","lastName":"Crouse","registered":true,"zipCode":"19106"}]'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer c2gMJxk6E1Z8oRkQVu9rYwAADDMCmA45JlrY8CZjVhG2GKzyYSFvgd9TTrESgAbSs-xCu5UwZ6tUVludWg8GQfro_S1RDJ5Gs0bhneQBnCIYya3adUdEEp4ByCTHPjIr1wp2ydWXaK-OMUqZwezZEAVaMRsIwtYPSkA84SdbKhPcRxXtbSXpb4ZrkS5V4GQNNmUm8wVFRP9RSrnivw1LuFGZ1OwyIYBW1az6CXNq7eLHJrHA3UgnviMnpQpfy3sfa67R2wQUduEb2ikFMV53EVmdtZ9KhCRinhtuAjT2dtLa0jGbfLfTvd480XJqC3v9lFMkspXNT3LNHUEoY43HzPql7cV1O8JU6NhiP1nE41iQozLP9YNZcp-feqgRCPqEKSXeVyRTmvyfcMPFvDMvTQ
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 11 Jan 2019 20:11:51 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":201,"resourceId":null}'
+    http_version: 
+  recorded_at: Fri, 11 Jan 2019 20:11:52 GMT
+recorded_with: VCR 2.9.3

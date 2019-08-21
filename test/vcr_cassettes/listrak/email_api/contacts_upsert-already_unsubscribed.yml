@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5JU
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 19 Dec 2018 17:52:31 GMT
+      Content-Length:
+      - '486'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"59adJAyrOd7wOO7YZAZd5YTiMC7iptGHpS2v9luzCwBCQ7Csm2gLzqzMfN4FlRwDG7oXDFUVmHh9JXLKffm2A42SRJgM3rCCOktdNfEIpQLhB_a1J-aoD4q2j14asM1J6N0829_9jWWY1dbwjeZJqx4DlqxpqE7PCAc8Da-hVXaVAVip5wbKxQ63qdTXLGWpTPmeoxYG9SrA7HJXu3JxF25mlPA9jvT52kuQ_znJb_QTyqfnPUYXEsn93efM6ZPyPHk_wboKqAapICQam-GMRnFMiYMVy0qir9c29CcG9rcLmFNz3u-dWTSALc1asKi6MGFBVk-KGe4sDy6BGNWyLvOik_3e9K_Kd5eqvy1IdQSzML4F2140iwb7M87HaBVaIXQ_gWwTF9xy355aiPAlWgU3f4ma2KUeVgkL4OXEbm0","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Wed, 19 Dec 2018 17:52:32 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/email/v1/List/349984/Contact
+    body:
+      encoding: UTF-8
+      string: '{"emailAddress":"customer@workarea.com","subscriptionState":"Subscribed","segmentationFieldValues":null}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer 59adJAyrOd7wOO7YZAZd5YTiMC7iptGHpS2v9luzCwBCQ7Csm2gLzqzMfN4FlRwDG7oXDFUVmHh9JXLKffm2A42SRJgM3rCCOktdNfEIpQLhB_a1J-aoD4q2j14asM1J6N0829_9jWWY1dbwjeZJqx4DlqxpqE7PCAc8Da-hVXaVAVip5wbKxQ63qdTXLGWpTPmeoxYG9SrA7HJXu3JxF25mlPA9jvT52kuQ_znJb_QTyqfnPUYXEsn93efM6ZPyPHk_wboKqAapICQam-GMRnFMiYMVy0qir9c29CcG9rcLmFNz3u-dWTSALc1asKi6MGFBVk-KGe4sDy6BGNWyLvOik_3e9K_Kd5eqvy1IdQSzML4F2140iwb7M87HaBVaIXQ_gWwTF9xy355aiPAlWgU3f4ma2KUeVgkL4OXEbm0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - Microsoft-IIS/8.5
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 19 Dec 2018 17:52:31 GMT
+      Expires:
+      - "-1"
+      Pragma:
+      - no-cache
+      Connection:
+      - close
+      X-Powered-By:
+      - ASP.NET
+      Content-Length:
+      - '131'
+    body:
+      encoding: UTF-8
+      string: '{"status":400,"error":"ERROR_UNSUBSCRIBED_EMAIL_ADDRESS","message":"The
+        emailAddress has already been unsubscribed from the list."}'
+    http_version: 
+  recorded_at: Wed, 19 Dec 2018 17:52:32 GMT
+recorded_with: VCR 2.9.3

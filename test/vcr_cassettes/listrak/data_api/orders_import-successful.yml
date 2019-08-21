@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=a&client_secret=b
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 14:15:18 GMT
+      Content-Length:
+      - '465'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"q7loCkft2Ux4T5vjiWsjBLRmzC1waR4Ww4n11nvYE-ZJYHNwnMgfqV-NMywZpRj_jSsgKetRNFuNfBQyYmgGfm-Lq5uNsL-nhXi3mUK0Je-T6XnbOK-FZ4GZ9EgwgHymK5mTcELrlseu4K0_0yCglfAcuLFmGBDBMimcrxNfyWbdMYoXjNww8GcuCq4Cf5P2T975fxSsv2ZHDGSAZ1WcvQcuyhbut__ZUcWkAhaWbMsikgYxJiunZr_U4NU4F5jGkRrsPKf58NR3JU29hS4chd6BOfL68SvcP_KOpPBz58DAETuQyyQp1R-Clq9ttY35G3eip_v0Wlj30ONWKt_oDksHh_UE9T8-JK_8UstX76WDFjEUhVbyiQpitctYx5CVFSMwMzaYXeD6voqTjlNZMA","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 14:15:20 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/data/v1/Order
+    body:
+      encoding: UTF-8
+      string: '[{"associateID":null,"billingAddress":{"address1":"22 S. 3rd St.","address2":"Second
+        Floor","city":"Philadelphia","country":"United States of America","state":"PA"},"couponCode":null,"customerNumber":"","dateEntered":"2019-01-14T14:15:19Z","discountTotal":0.0,"email":"bcrouse-new@workarea.com","handlingTotal":1.0,"items":[{"discountDescription":null,"discountType":null,"discountedPrice":0,"itemTotal":10.0,"itemDiscountTotal":0,"meta1":null,"meta2":null,"meta3":null,"meta4":null,"meta5":null,"orderNumber":"1234","price":5.0,"quantity":2,"shipDate":null,"shippingMethod":null,"sku":"SKU","status":null,"trackingNumber":null}],"itemTotal":10.0,"merchandiseDiscount":0.0,"merchandiseDiscountDescription":null,"merchandiseDiscountType":null,"meta1":null,"meta2":null,"meta3":null,"meta4":null,"meta5":null,"nonMerchandiseDiscount":null,"nonMerchandiseDiscountDescription":null,"nonMerchandiseDiscountType":null,"orderNumber":"1234","orderTotal":10.0,"shipDate":null,"shippingAddress":{"address1":"22
+        S. 3rd St.","address2":"Second Floor","city":"Philadelphia","country":"United
+        States of America","state":"PA"},"shippingMethod":"Test 0","shippingTotal":1.0,"source":"web","status":"placed","storeNumber":null,"taxTotal":0.0,"trackingNumber":null}]'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer q7loCkft2Ux4T5vjiWsjBLRmzC1waR4Ww4n11nvYE-ZJYHNwnMgfqV-NMywZpRj_jSsgKetRNFuNfBQyYmgGfm-Lq5uNsL-nhXi3mUK0Je-T6XnbOK-FZ4GZ9EgwgHymK5mTcELrlseu4K0_0yCglfAcuLFmGBDBMimcrxNfyWbdMYoXjNww8GcuCq4Cf5P2T975fxSsv2ZHDGSAZ1WcvQcuyhbut__ZUcWkAhaWbMsikgYxJiunZr_U4NU4F5jGkRrsPKf58NR3JU29hS4chd6BOfL68SvcP_KOpPBz58DAETuQyyQp1R-Clq9ttY35G3eip_v0Wlj30ONWKt_oDksHh_UE9T8-JK_8UstX76WDFjEUhVbyiQpitctYx5CVFSMwMzaYXeD6voqTjlNZMA
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 14 Jan 2019 14:15:20 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":201,"resourceId":null}'
+    http_version: 
+  recorded_at: Mon, 14 Jan 2019 14:15:20 GMT
+recorded_with: VCR 2.9.3

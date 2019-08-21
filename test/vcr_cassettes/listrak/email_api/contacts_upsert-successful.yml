@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.listrak.com/OAuth2/Token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials&client_id=doyfni0aw64ogd84ld6t&client_secret=LxdEE4Gu4aSJv5tS9osd8WudjGbJ%2BEIPYvZBS7bc5JU
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 19 Dec 2018 19:12:59 GMT
+      Content-Length:
+      - '486'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"vUGMJ5TjrO1zrapsAnrCgUl_ZAIEdQOpCSXxndQQlf6Wr7vj1SPZRDEae4TVSV96uS9I7rL7RzCboE2KeWUhpKmMa08mxEdozJzC1sjA-bQRSctiTdrreTb17qkuTrCz3jyqMe596bHe07xS3gY9vCSkD7sUfP2apYX_qv3qrBf7egCeImIwWjpOLIneqd30bl5NaLV6_0cG5itPKoQjBLOS0A5mPSC2RLaOIx3huZfayl-aVvVt45zOtQg7YdaOAxiye7i4zzzAIZ1dYeX99u2e9DFlZ9jQPvSa855V1ReOguOOGXMk5pIXxw3zblsKI0-pT7SldS04uUChyDegH7_YfGvrEjY_iR-T7bbx5_cKEcmzn40AKT1eghZBzqAITF3TQb02WyU0EuqG3RJfuzrMKTK3Qycfswh5r-3Rvog","token_type":"bearer","expires_in":3599}'
+    http_version: 
+  recorded_at: Wed, 19 Dec 2018 19:12:59 GMT
+- request:
+    method: post
+    uri: https://api.listrak.com/email/v1/List/349984/Contact
+    body:
+      encoding: UTF-8
+      string: '{"emailAddress":"customer+new@workarea.com","subscriptionState":"Subscribed","segmentationFieldValues":null}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Bearer vUGMJ5TjrO1zrapsAnrCgUl_ZAIEdQOpCSXxndQQlf6Wr7vj1SPZRDEae4TVSV96uS9I7rL7RzCboE2KeWUhpKmMa08mxEdozJzC1sjA-bQRSctiTdrreTb17qkuTrCz3jyqMe596bHe07xS3gY9vCSkD7sUfP2apYX_qv3qrBf7egCeImIwWjpOLIneqd30bl5NaLV6_0cG5itPKoQjBLOS0A5mPSC2RLaOIx3huZfayl-aVvVt45zOtQg7YdaOAxiye7i4zzzAIZ1dYeX99u2e9DFlZ9jQPvSa855V1ReOguOOGXMk5pIXxw3zblsKI0-pT7SldS04uUChyDegH7_YfGvrEjY_iR-T7bbx5_cKEcmzn40AKT1eghZBzqAITF3TQb02WyU0EuqG3RJfuzrMKTK3Qycfswh5r-3Rvog
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '55'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 19 Dec 2018 19:12:59 GMT
+    body:
+      encoding: UTF-8
+      string: '{"status":201,"resourceId":"customer+new@workarea.com"}'
+    http_version: 
+  recorded_at: Wed, 19 Dec 2018 19:13:00 GMT
+recorded_with: VCR 2.9.3

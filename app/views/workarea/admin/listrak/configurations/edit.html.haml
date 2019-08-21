@@ -1,0 +1,28 @@
+- @page_title = t('workarea.admin.listrak_configuration.edit.title')
+
+.view
+  .view__header
+    .view__heading
+      = link_to "↑ #{t('workarea.admin.dashboards.settings.settings_dashboard')}", settings_dashboards_path
+      %h1= t('workarea.admin.listrak_configuration.edit.title')
+
+  .view__container
+    = form_tag listrak_configuration_path, method: :patch, data: { unsaved_changes: '' } do
+      .property
+        = label_tag 'default_list_id', t('workarea.admin.listrak_configuration.edit.default_list'), class: 'property__name'
+        = select_tag 'default_list_id', options_from_collection_for_select(@configuration.all_lists, 'id', 'name', @configuration.default_list_id)
+
+      .property
+        = label_tag 'external_event_ids[]', class: 'property__name' do
+          %span= t('workarea.admin.listrak_configuration.edit.external_events')
+
+          = link_to "#event_ids", data: { tooltip: '' } do
+            = inline_svg('workarea/admin/icons/help.svg', class: 'svg-icon svg-icon--small svg-icon--blue', title: t('workarea.admin.content.form.tooltip.title'))
+          #event_ids.tooltip-content= t('workarea.admin.listrak_configuration.edit.event_itds_tooltip')
+
+        = select_tag "external_event_ids[]", options_for_select(@configuration.event_options, @configuration.external_event_ids), multiple: true, data: { listrak_events_select: "" }
+
+
+      .workflow-bar
+        .grid.grid--auto.grid--right.grid--middle
+          .grid__cell= button_tag t('workarea.admin.listrak_configuration.edit.button'), value: 'save_settings', class: 'workflow-bar__button workflow-bar__button--update'
