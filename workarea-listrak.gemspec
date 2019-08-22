@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Workarea::Listrak::VERSION
   s.authors     = ["Eric Pigeon"]
   s.email       = ["epigeon@workarea.com"]
-  s.homepage    = "http://www.workarea.com"
+  s.homepage    = "https://github.com/workarea-commerce/workarea-listrak"
   s.summary     = "Listrak plugin for Workarea"
   s.description = "Integrates with Listrak services"
   s.files       = `git ls-files`.split("\n")
