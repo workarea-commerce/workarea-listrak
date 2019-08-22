@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = "Listrak plugin for Workarea"
   s.description = "Integrates with Listrak services"
   s.files       = `git ls-files`.split("\n")
+  s.license = 'Business Software License'
 
   s.add_dependency "workarea", "~> 3.x", ">= 3.0.5"
 end
