@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-source "https://gems.weblinc.com"
 
 gemspec
 

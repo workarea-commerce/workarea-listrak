@@ -2,7 +2,6 @@ module Workarea
   module Listrak
     module Models
       class OrderItem
-
         attr_reader :order, :order_item
 
         def initialize(order, order_item)

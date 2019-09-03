@@ -1,7 +1,6 @@
 module Workarea
   module Listrak
     class EmailApi::Contacts
-
       attr_reader :client
 
       def initialize(client)

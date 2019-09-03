@@ -13,6 +13,7 @@
 Gemfile.lock
 test/dummy/tmp/export/*.csv
 .DS_Store
+node_modules/
 
 ## Documentation cache and generated files:
 /.yardoc/
