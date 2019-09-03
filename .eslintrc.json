@@ -30,7 +30,6 @@
       "expect": true,
       "sinon": true,
       "fixture": true,
-      "chai": true,
-      "_ltk": true
+      "chai": true
     }
 }
