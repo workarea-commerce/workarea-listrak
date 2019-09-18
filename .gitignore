@@ -31,3 +31,4 @@ log
 tmp
 test/dummy/public/system/
 coverage
+.rubocop-http*
