@@ -1,4 +1,5 @@
-# Listrak
+Workarea Listrak
+================================================================================
 
 Integrate the [Listrak][] ERP with the Workarea platform. This plugin
 currently implements the following Listrak features:
@@ -8,15 +9,25 @@ currently implements the following Listrak features:
 - Transactional email delivery
 - Automatically subscribing users to a distribution list
 
-## Installation
+Getting Started
+--------------------------------------------------------------------------------
 
-Add the following to Gemfile:
+Add the gem to your application's Gemfile:
 
 ```ruby
-gem 'workarea-listrak', '~> 5.0'
+# ...
+gem 'workarea-listrak'
+# ...
 ```
 
-### Secrets
+Update your application's bundle.
+
+```bash
+cd path/to/application
+bundle
+```
+
+Update your `config/secrets.yml` file with your api credentials:
 
 ```yaml
 listrak:
@@ -28,7 +39,8 @@ listrak:
     client_secret:
 ```
 
-### Configuration
+Configuration
+--------------------------------------------------------------------------------
 
 Most listrak configuration is set via the admin; you will need to set the
 `Default List` in the admin after installing the plugin.
@@ -39,19 +51,21 @@ Most listrak configuration is set via the admin; you will need to set the
 Workarea.config do |config|
   config.listrak.analytics = {
     merchant_id: 'LISTRAK MERCHANT ID',
-    email_capture_ids: 'ID's OF EMAIL FIELDS USED FOR JAVASCRIPT ABANDONMENT'
+    email_capture_ids: 'EMAIL FIELD IDS USED FOR JAVASCRIPT ABANDONMENT'
   }
 end
 ```
 
-### Subscribing email addresses to a distribution list
+Subscribing email addresses to a distribution list
+--------------------------------------------------------------------------------
 
 When customers sign up for the newsletter within the popup dialog or
 create a new user account, `Workarea::Listrak` will send the email and
 any other user-specific information to Listrak. This occurs immediately
 in a background job during creation of a `Email::Signup`.
 
-### Data Exporting
+Data Exporting
+--------------------------------------------------------------------------------
 
 The following will be sent to Listrak via API whenever they are created or saved:
 
@@ -59,7 +73,8 @@ The following will be sent to Listrak via API whenever they are created or saved
 * Orders (on order place)
 * Products
 
-### Transactional Email Delivery
+Transactional Email Delivery
+--------------------------------------------------------------------------------
 
 This library is capable of replacing the internal application mailers
 with API calls to Listrak's email delivery service, passing it the data
@@ -110,7 +125,8 @@ To send the message, call the `#deliver` method:
 OrderConfirmationMessage.new(order).deliver
 ```
 
-### JavaScript Analytics Integration
+JavaScript Analytics Integration
+--------------------------------------------------------------------------------
 
 All of Listrak's JS code blocks respond to the `listrakAsyncListener`
 event, which is triggered after Listrak's external "SDK" code is loaded
@@ -128,3 +144,13 @@ To reiterate, **listrak.js needs to be your last initialized JS
 module**.
 
 [Listrak]: http://listrak.com
+
+Workarea Commerce Documentation
+--------------------------------------------------------------------------------
+
+See [https://developer.workarea.com](https://developer.workarea.com) for Workarea Commerce documentation.
+
+License
+--------------------------------------------------------------------------------
+
+Workarea Listrak is released under the [Business Software License](LICENSE)
