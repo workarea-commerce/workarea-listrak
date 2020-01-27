@@ -5,20 +5,28 @@ module Workarea
       #
       # @param client_id [String] client id
       # @param client_secret [String] client secret
+      # @param options [Hash] extra options when getting the OAuth token
+      # @option options [Integer] timeout value for open and read timeouts
+      # @option options [Integer] open_timeout value for open timeout
+      # @option options [Integer] read_timeout value for read timeout
+      #
       # @raise [OauthError] raised if generating an Oauth token is unsucessful
+      #
       # @return [String] Oauth token
-      def self.token(client_id:, client_secret:)
+      def self.token(client_id:, client_secret:, **options)
         cache_key = "listrak/api/#{client_id}"
         token = Rails.cache.read(cache_key)
 
         return token if token.present?
 
-        payload = {
+        uri = URI('https://auth.listrak.com/OAuth2/Token')
+        params = {
           grant_type: 'client_credentials',
           client_id: client_id,
           client_secret: client_secret
         }
-        response = http.post('/OAuth2/Token', payload.to_json)
+
+        response = Net::HTTP.post_form uri, params
 
         case response
         when ::Net::HTTPSuccess
@@ -30,12 +38,6 @@ module Workarea
           token
         else
           raise OauthError.new response
-        end
-      end
-
-      def self.http
-        @http ||= Net::HTTP.new('auth.listrak.com', 443).tap do |client|
-          client.use_ssl = true
         end
       end
     end
