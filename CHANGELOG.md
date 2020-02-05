@@ -1,3 +1,26 @@
+Workarea Listrak 5.0.3 (2020-02-05)
+--------------------------------------------------------------------------------
+
+*   Fix Proxy Usage in OAuth Client
+
+    When obtaining an OAuth access token from Listrak, requests were not
+    being sent through the HTTP proxy set in `$http_proxy` due to the way
+    the `Net::HTTP` library was being used. To resolve this, refactor the
+    `Listrak::OAuth.token` code to make a request using an instance of the
+    `Net::HTTP` client, rather than by using the `.post_form` convenience
+    method, as this is the only way to use the proxy in production.
+
+    Fixes #2
+
+    LISTRAK-1
+    Tom Scott
+
+*   Update README
+
+    Matt Duffy
+
+
+
 Workarea Listrak 5.0.2 (2019-08-22)
 --------------------------------------------------------------------------------
 
