@@ -1,3 +1,25 @@
+Workarea Listrak 5.0.4 (2020-09-11)
+--------------------------------------------------------------------------------
+
+*   Bump version for release
+
+
+    Ben Crouse
+
+*   Ignore Tracking Params In Rack Cache
+
+    Set the `Rack::Cache::Key` proc to ignore any param that starts with
+    `trk_`, as these parameters are sent by Listrak and are unique per
+    email, and used to track clicks from emails on the site. This avoids a
+    potential over-caching situation in which a given request cannot be cached
+    due to the constantly changing query parameters.
+
+    LISTRAK-3
+
+    Tom Scott
+
+
+
 Workarea Listrak 5.0.3 (2020-02-05)
 --------------------------------------------------------------------------------
 
