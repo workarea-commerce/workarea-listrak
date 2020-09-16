@@ -1,11 +1,6 @@
 Workarea Listrak 5.0.4 (2020-09-11)
 --------------------------------------------------------------------------------
 
-*   Bump version for release
-
-
-    Ben Crouse
-
 *   Ignore Tracking Params In Rack Cache
 
     Set the `Rack::Cache::Key` proc to ignore any param that starts with
